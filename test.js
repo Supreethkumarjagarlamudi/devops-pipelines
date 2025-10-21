@@ -1,5 +1,7 @@
 console.log("Starting tests...");
-setTimeout(() => {
-    console.log("Waiting for tests to complete(ETA: 3s)...")
-}, 3000);
+
+async function runTests() {
+    await new Promise(resolve => setTimeout(resolve, 3000));
+} 
+runTests();
 console.log("Tests completed successfully!");
